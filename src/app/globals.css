@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply box-border;
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  @apply bg-jersey-white text-jersey-text;
+}
+
+/* Typography */
+h1 {
+  @apply font-playfair font-bold text-4xl md:text-5xl leading-tight text-jersey-navy;
+}
+
+h2 {
+  @apply font-playfair font-bold text-3xl md:text-4xl leading-tight text-jersey-navy;
+}
+
+h3 {
+  @apply font-playfair font-bold text-2xl md:text-3xl leading-snug text-jersey-navy;
+}
+
+h4 {
+  @apply font-playfair font-semibold text-xl md:text-2xl text-jersey-navy;
+}
+
+h5 {
+  @apply font-playfair font-semibold text-lg text-jersey-navy;
+}
+
+h6 {
+  @apply font-sans font-semibold text-base text-jersey-navy;
+}
+
+p {
+  @apply leading-relaxed;
+}
+
+a {
+  @apply text-jersey-navy hover:text-jersey-gold transition-colors;
+}
+
+/* Buttons */
+.btn {
+  @apply inline-flex items-center justify-center px-6 py-3 font-semibold rounded-lg transition-all duration-200;
+}
+
+.btn-primary {
+  @apply btn bg-jersey-navy text-white hover:bg-jersey-navy/90;
+}
+
+.btn-secondary {
+  @apply btn bg-jersey-gold text-jersey-navy hover:bg-jersey-gold/90;
+}
+
+.btn-outline {
+  @apply btn border-2 border-jersey-navy text-jersey-navy hover:bg-jersey-navy hover:text-white;
+}
+
+.btn-small {
+  @apply px-4 py-2 text-sm;
+}
+
+/* Cards */
+.card {
+  @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-6;
+}
+
+.card-bordered {
+  @apply border border-gray-200;
+}
+
+/* Containers */
+.container-wide {
+  @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+.container-narrow {
+  @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
+}
+
+/* Separators */
+.separator {
+  @apply border-t-2 border-jersey-gray;
+}
+
+.separator-gold {
+  @apply border-t-4 border-jersey-gold;
+}
+
+/* Ticker/Breaking News */
+.ticker {
+  @apply bg-jersey-navy text-white px-6 py-2 font-bold inline-block;
+}
+
+.ticker-item {
+  @apply animate-marquee whitespace-nowrap;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* Form styles */
+input, textarea, select {
+  @apply w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-jersey-navy focus:border-transparent;
+}
+
+textarea {
+  @apply resize-none;
+}
+
+label {
+  @apply block text-sm font-semibold text-jersey-navy mb-2;
+}
+
+.form-group {
+  @apply mb-6;
+}
+
+/* Grid layouts */
+.grid-cols-auto {
+  @apply grid gap-6;
+}
+
+@screen md {
+  .grid-cols-auto {
+    @apply grid-cols-3;
+  }
+}
+
+/* Responsive images */
+img {
+  @apply max-w-full h-auto;
+}
+
+/* Utility classes */
+.text-gradient {
+  @apply bg-gradient-to-r from-jersey-navy to-jersey-gold bg-clip-text text-transparent;
+}
+
+.shadow-header {
+  @apply shadow-md;
+}
+
+.fade-in {
+  @apply animate-fadeIn;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Print styles */
+@media print {
+  body {
+    @apply bg-white;
+  }
+  
+  .no-print {
+    @apply hidden;
+  }
+}
