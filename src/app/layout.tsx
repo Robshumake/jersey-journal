@@ -3,7 +3,7 @@ import './globals.css'
 import { Playfair_Display, Source_Sans_3 } from 'next/font/google'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import { SessionProvider } from 'next-auth/react'
+import SessionWrapper from '@/components/SessionWrapper'
 
 const playfair = Playfair_Display({
   subsets: ['latin'],
@@ -60,13 +60,13 @@ export default function RootLayout({
         <link rel="alternate" type="application/rss+xml" title="The Jersey Journal" href="/feed.xml" />
       </head>
       <body className="bg-jersey-white text-jersey-text font-sans">
-        <SessionProvider>
+        <SessionWrapper>
           <Header />
           <main className="min-h-screen">
             {children}
           </main>
           <Footer />
-        </SessionProvider>
+        </SessionWrapper>
       </body>
     </html>
   )
