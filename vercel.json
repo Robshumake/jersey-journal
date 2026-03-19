@@ -1,42 +1,7 @@
 {
   "buildCommand": "npm run build",
   "devCommand": "npm run dev",
-  "installCommand": "npm install",
-  "env": {
-    "DATABASE_URL": {
-      "description": "PostgreSQL database connection string"
-    },
-    "NEXTAUTH_URL": {
-      "description": "The URL of your deployment"
-    },
-    "NEXTAUTH_SECRET": {
-      "description": "Secret key for NextAuth (generate with: openssl rand -base64 32)"
-    },
-    "STRIPE_SECRET_KEY": {
-      "description": "Stripe API secret key"
-    },
-    "NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY": {
-      "description": "Stripe API publishable key"
-    },
-    "STRIPE_WEBHOOK_SECRET": {
-      "description": "Stripe webhook secret"
-    },
-    "SMTP_HOST": {
-      "description": "Email server host"
-    },
-    "SMTP_PORT": {
-      "description": "Email server port"
-    },
-    "SMTP_USER": {
-      "description": "Email server username"
-    },
-    "SMTP_PASSWORD": {
-      "description": "Email server password"
-    },
-    "EMAIL_FROM": {
-      "description": "From email address"
-    }
-  },
+  "installCommand": "npm install --legacy-peer-deps",
   "headers": [
     {
       "source": "/robots.txt",
