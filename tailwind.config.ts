@@ -35,11 +35,16 @@ const config: Config = {
       },
       animation: {
         marquee: 'marquee 30s linear infinite',
+        fadeIn: 'fadeIn 0.5s ease-in-out',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
+        },
+        fadeIn: {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
       },
     },
