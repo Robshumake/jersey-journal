@@ -19,7 +19,7 @@ export async function GET(req: NextRequest) {
       date: article.publishedAt || new Date(),
       author: article.author?.name,
       categories: [article.category],
-      imageUrl: article.imageUrl,
+      imageUrl: article.imageUrl ?? undefined,
     }))
 
     const rssXml = generateNewsXML({
